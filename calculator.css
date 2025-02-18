@@ -1,0 +1,92 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+/* Background */
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("bg.jpg");
+  background-size: cover; /* Ensures it covers the entire screen */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents tiling */
+}
+
+/* Calculator Container */
+.calculator {
+  width: 300px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 25px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2),
+    -4px -4px 10px rgba(255, 255, 255, 0.7);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+/* Display Screen */
+.display {
+  grid-column: span 4;
+  height: 60px;
+  background: #e8f0f5;
+  border-radius: 15px;
+  text-align: right;
+  padding: 15px;
+  font-size: 2rem;
+  color: #555;
+  box-shadow: inset 5px 5px 10px #b6a3c2, inset -5px -5px 10px #ffffff;
+  overflow: hidden;
+}
+
+/* Buttons */
+.btn {
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  background: #ffffff;
+  box-shadow: 5px 5px 10px #b6a3c2, -5px -5px 10px #ffffff;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+/* Button Hover & Click Effects */
+.btn:hover {
+  background: #f3f3f3;
+}
+
+.btn:active {
+  box-shadow: inset 5px 5px 10px #b6a3c2, inset -5px -5px 10px #ffffff;
+}
+
+/* Special Buttons */
+.clear,
+.delete {
+  background: #f8d7da;
+  color: #d9534f;
+}
+
+.operator,
+.square {
+  color: #6c63ff;
+}
+
+.equals {
+  grid-column: span 2;
+  border-radius: 25px;
+  background: #e79ec5;
+  color: white;
+}
+
+.equals:hover {
+  background: #e183af;
+}
